@@ -1,0 +1,89 @@
+{
+  "header": {
+    "stalking": "Harcèlement",
+    "community": "Communauté",
+    "about": "À propos",
+    "media": "Médias",
+    "how_to_buy": "Comment acheter",
+    "tokenomics": "Tokenomics",
+    "airdrop": "Airdrop"
+  },
+  "banner": {
+    "title": "Wall Street Memes listé sur les bourses de niveau 1 dans :",
+    "subtitle": "DERNIÈRE CHANCE D'ACHETER ! ÉTAPE FINALE.",
+    "description": "Plus de 25 millions de dollars levés",
+    "button_connect": "Connecter le portefeuille",
+    "power_by": "Propulsé par ",
+    "button_deposit": "dépôt",
+    "button_airdrop": "Réclamez le largage",
+    "button_refer": "Créer une référence",
+    "button_whitepaper": "papier blanc",
+
+    "label_pay": "Montant en ETH que vous payez",
+    "label_max": "Maximum",
+    "label_receive": "que vous recevez",
+    "label_amount": "Montant en"
+
+  },
+  "meme_buss": {
+    "title": "NOUS MEME BUSINESS!",
+    "label_community": "COMMUNAUTÉ",
+    "label_impression": "IMPRESSIONS PAR MOIS",
+    "label_unlimited": "ILLIMITÉ",
+    "label_memes": "MEMES",
+
+    "label_even": "MÊME ELON AIME NOS MEMES !",
+    "description_even": "Wall Street Memes vous apporte le symbole tant attendu d'une communauté dynamique suivie et engagée même par Elon Musk."
+  },
+  "wsm_token": {
+    "title": "$JETON WSM",
+    "content_1": "Le petit gars a défié Wall Street lors du tristement célèbre fiasco GameStop de 2021, et l'héritage de ces courageux héros de Wall Street Bets perdure jusqu'à aujourd'hui.",
+    "content_2": "Wall Street Memes est né de ce mouvement - l'expression ultime du triomphe d'Internet sur le capitalisme rampant. \"La cupidité est une bonne chose\", disait Gordon Gekko dans les années 80 alors qu'il s'enrichissait grâce à des actions inutiles. Environ 30 ans plus tard, des centaines de pièces de monnaie, sans doute encore plus inutiles, permettent aux gens ordinaires de faire de même.",
+    "content_3": "Wall Street Memes symbolise le mouvement. Rejoignez l'armée $WSM aujourd'hui et prouvez que la cupidité est en effet très bonne."
+  },
+  "wall_meme": {
+    "title": "HOW TO BUY WALL STREET MEMES TOKEN",
+    "subtitle": "Take charge and buy $WSM tokens in presale using ETH, BNB, USDT, or bank card before it lists on DEX.",
+    "speech_1": "Send ETH or BNB to your wallet and ape in using your preferred chain. Use the presale widget above to swap for $WSM.",
+    "speech_2": "You can also buy $WSM tokens with USDT (ERC-20 or BEP-20). Use the USDT option and swap your desired amount.",
+    "speech_3": "Prefer plastic? No problem. Have your own crypto wallet address on hand and order $WSM tokens using your bank card.",
+    "button_helper": "More Helper"
+  },
+  "roadmap": {
+    "title": "ROADMAP",
+    "subtitle": "We're laying the foundation and empowering our community every step of the way. Together, we'll show the world that Wall Street Memes is here to stay.",
+    "phase": "PHASE",
+    "foundation": "FOUNDATION",
+    "launch": "LAUNCH",
+    "community": "COMMUNITY EMPOWERMENT",
+    "smart_contract": "🚀 Smart Contract Development:",
+    "smart_contract_content": "Secure and audited smart contract for WSM token to ensure transparency and trust."
+  },
+  "tokenomics": {
+    "title": "TOKENOMICS",
+    "subtitle": "Le lancement du token $WSM contribuera à soutenir la croissance de la communauté Wall Street Memes et à récompenser les membres fidèles.",
+    "marketing": "Marketing",
+    "community_rewards": "Récompenses de la communauté",
+    "cex": "Liquidité CEX",
+    "dex": "Liquidité DEX"
+  },
+  "wsm_media": {
+    "title": "WSM DANS LES MÉDIAS",
+    "content": "La SEULE pièce Meme qui vaut la peine d'être achetée - Le PEPE Coin Killer ! (Énorme potentiel !)"
+  },
+  "wsm_airdrop": {
+    "title": "50 000 $ DE DROP WSM ",
+    "subtitle": "Nous offrons 50 000 $ de jetons $WSM répartis entre 5 chanceux dans le cadre d'un airdrop très généreux de Wall Street Memes. Participez ci-dessous et assurez-vous d'être de la partie pour le gagner !",
+    "common_ans": "Les réponses courantes aux questions sur les mèmes de Wall Street ($WSM) peuvent être trouvées ci-dessous.",
+    "ques": "Quels sont les détails du jeton $WSM ?",
+    "ans": "$WSM est un jeton ERC-20 sur la blockchain Ethereum avec une offre maximale de 2 000 000 000 (2 milliards). L'adresse du contrat du jeton est 0xB62E45c3Df611dcE236A6Ddc7A493d79F9DFadEf. Veuillez ne pas envoyer de fonds à cette adresse du contrat du jeton, car ils ne peuvent pas être envoyés. récupérés. Les $WSM ne peuvent actuellement être achetés que via la prévente officielle."  
+  },
+  "footer": {
+    "content_1": "Tower Financial Centre, 10e étage, 50e rue et coin d'Elvira, Panama City, Panama. Numéro d'enregistrement 182731846. WallStMemes LTD",
+    "content_2": "Mèmes de Wall Street. Tous droits réservés.",
+    "link_1": "Conditions générales",
+    "link_2": "Confidentialité",
+    "link_3": "Cookies",
+    "content_3": "Les crypto-monnaies peuvent ne pas être réglementées dans votre juridiction. La valeur des crypto-monnaies peut augmenter ou diminuer. Les bénéfices peuvent être soumis aux plus-values ​​ou à d'autres impôts applicables dans votre juridiction"  
+  }
+}

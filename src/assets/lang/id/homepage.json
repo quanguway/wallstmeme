@@ -1,0 +1,92 @@
+{
+  "header": {
+    "stalking": "Menguntit",
+    "community": "Komunitas",
+    "about": "Tentang",
+    "media": "Media",
+    "how_to_buy": "Cara membeli",
+    "tokenomics": "Tokenomics",
+    "airdrop": "tetesan udara",
+    "connect_wallet": "Hubungkan Dompet"
+  },
+  "banner": {
+    "title": "Daftar Meme Wall Street di bursa tingkat 1 di:",
+    "subtitle": "KESEMPATAN TERAKHIR UNTUK MEMBELI! TAHAP AKHIR.",
+    "description": "Lebih dari $25 juta yang terkumpul",
+    "button_connect": "Hubungkan Dompet",
+    "power_by": "Didukung oleh ",
+
+    "button_deposit": "deposit",
+    "button_airdrop": "Klaim airdrop",
+    "button_refer": "Buat referensi",
+    "button_whitepaper": "kertas putih",
+
+    "label_pay": "Jumlah dalam ETH yang Anda bayar",
+    "label_max": "Maks",
+    "label_receive": "Anda menerima",
+    "label_amount": "Jumlah masuk"
+  },
+  "meme_buss": {
+    "title": "KAMI MEME BISNIS!",
+    "label_community": "KOMUNITAS",
+    "label_impression": "TASAN PER BULAN",
+    "label_unlimited": "TANPA BATAS",
+    "label_memes": "MEMES",
+
+    "label_even": "BAHKAN ELON MENCINTAI MEME KAMI!",
+    "description_even": "Wall Street Memes memberi Anda token yang telah lama ditunggu-tunggu untuk komunitas dinamis yang diikuti dan dilibatkan bahkan oleh Elon Musk."
+  },
+  "wsm_token": {
+    "title": "$WSM TOKEN",
+    "content_1": "Si kecil menantang Wall Street dalam kegagalan GameStop yang terkenal pada tahun 2021, dan warisan para pahlawan Wall Street Bets yang pemberani itu bertahan hingga hari ini.",
+    "content_2": "Yang lahir dari gerakan tersebut adalah Wall Street Memes - ekspresi utama kemenangan internet atas kapitalisme yang merajalela. “Keserakahan itu baik,” kata Gordon Gekko di tahun 80an saat ia menjadi kaya dari saham-saham yang tidak berguna. Sekitar 30 tahun kemudian, ratusan koin meme yang bahkan lebih tidak berguna memungkinkan orang biasa melakukan hal yang sama.",
+    "content_3": "Wall Street Memes memberi token pada gerakan ini. Bergabunglah dengan tentara $WSM hari ini dan buktikan bahwa keserakahan memang sangat baik."
+    
+  },
+  "wall_meme": {
+    "title": "CARA MEMBELI TOKEN MEMES WALL STREET",
+    "subtitle": "Ambil alih kendali dan beli token $WSM dalam prapenjualan menggunakan ETH, BNB, USDT, atau kartu bank sebelum terdaftar di DEX.",
+    "speech_1": "Kirim ETH atau BNB ke dompet Anda dan gunakan rantai pilihan Anda. Gunakan widget pra-penjualan di atas untuk menukar $WSM.",
+    "speech_2": "Anda juga dapat membeli token $WSM dengan USDT (ERC-20 atau BEP-20). Gunakan opsi USDT dan tukarkan jumlah yang Anda inginkan.",
+    "speech_3": "Lebih suka plastik? Tidak masalah. Miliki alamat dompet kripto Anda sendiri dan pesan token $WSM menggunakan kartu bank Anda.",
+    "button_helper": "Pembantu Lainnya"
+  },
+  
+  "roadmap": {
+    "title": "Peta Jalan",
+    "subtitle": "Kami meletakkan fondasi dan memberdayakan komunitas kami di setiap langkah. Bersama-sama, kami akan menunjukkan kepada dunia bahwa Wall Street Memes akan tetap ada.",
+    "phase": "FASE",
+    "foundation": "FONDASI",
+    "launch": "PELUNCURAN",
+    "community": "PEMBERDAYAAN MASYARAKAT",
+    "smart_contract": "🚀 Pengembangan Kontrak Cerdas:",
+    "smart_contract_content": "Kontrak cerdas yang aman dan teraudit untuk token WSM guna memastikan transparansi dan kepercayaan."
+  },
+  "tokenomics": {
+    "title": "TOKENOMI",
+    "subtitle": "Peluncuran token $WSM akan membantu mempertahankan pertumbuhan komunitas Wall Street Memes dan memberi penghargaan kepada anggota setia.",
+    "marketing": "Pemasaran",
+    "community_rewards": "Hadiah Komunitas",
+    "cex": "Likuiditas CEX",
+    "dex": "Likuiditas DEX"
+  },
+  "wsm_media": {
+    "title": "WSM DI MEDIA",
+    "content": "Satu-satunya Koin Meme yang Layak Dibeli - Pembunuh Koin PEPE! (Potensi Besar!)"
+  },
+  "wsm_airdrop": {
+    "title": "$50K $WSM UDARA",
+    "subtitle": "Kami memberikan token $WSM senilai $50.000 yang dibagi antara 5 degen yang beruntung dalam airdrop Wall Street Memes yang sangat murah hati. Masuk ke bawah dan pastikan Anda ikut serta untuk memenangkannya!",
+    "common_ans": "Jawaban umum atas pertanyaan tentang Wall Street Memes ($WSM) dapat ditemukan di bawah.",
+    "ques": "Apa saja detail token $WSM?",
+    "ans": "$WSM adalah token ERC-20 di blockchain Ethereum dengan persediaan maksimum 2.000.000.000 (2 miliar). Alamat kontrak token adalah 0xB62E45c3Df611dcE236A6Ddc7A493d79F9DFadEf Harap jangan mengirimkan dana apa pun ke alamat kontrak token ini, karena dana tersebut tidak dapat dikirimkan pulih. $WSM saat ini hanya dapat dibeli melalui prapenjualan resmi."
+  },
+  "footer": {
+    "content_1": "Tower Financial Centre, Lantai 10, 50th Street & Corner of Elvira, Panama City, Panama. Nomor Registrasi 182731846. WallStMemes LTD",
+    "content_2": "Meme Wall Street. Semua Hak Dilindungi Undang-Undang.",
+    "link_1": "Syarat dan Ketentuan",
+    "link_2": "Privasi",
+    "link_3": "Kue",
+    "content_3": "Mata uang kripto mungkin tidak diatur di yurisdiksi Anda. Nilai mata uang kripto bisa turun dan naik. Keuntungan mungkin dikenakan keuntungan modal atau pajak lain yang berlaku di yurisdiksi Anda"
+  }
+}

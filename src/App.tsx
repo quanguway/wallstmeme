@@ -1,17 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import AppLayout from './layouts/AppLayout';
+import HomePage from './pages/HomePage';
 
 function AppUI() {
+
+
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/'>
-          {/* <Route index path='/' element={<DashboardPage />} /> */}
+        <Route path='/' element={<AppLayout/>}>
+          <Route index path='/' element={<HomePage />} />
           {/* <Route path='customers' element={<CustomerPage />} /> */}
-        
-
         </Route>
         <Route
             path="*"

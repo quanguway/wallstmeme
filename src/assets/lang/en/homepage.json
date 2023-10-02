@@ -1,0 +1,90 @@
+{
+  "header": {
+    "stalking": "Stalking",
+    "community": "Community",
+    "about": "About",
+    "media": "Media",
+    "how_to_buy": "How to buy",
+    "tokenomics": "Tokenomics",
+    "airdrop": "Airdrop",
+    "connect_wallet": "Connect Wallet"
+  },
+  "banner": {
+    "title": "Wall Street Memes listing on tier 1 exchanges in:",
+    "subtitle": "LAST CHANCE TO BUY! FINAL STAGE.",
+    "description": "Over $25m Raised",
+    "button_connect": "Connect Wallet",
+    "power_by": "Powered by ",
+
+    "button_deposit": "deposit",
+    "button_airdrop": "Claim airdrop",
+    "button_refer": "Create refer",
+    "button_whitepaper": "whitepaper",
+
+    "label_pay": "Amount in ETH you pay",
+    "label_max": "Max",
+    "label_receive": "you receive",
+    "label_amount": "Amount in"
+  },
+  "meme_buss": {
+    "title": "WE MEME BUSINESS!",
+    "label_community": "COMMUNITY",
+    "label_impression": "IMPRESSIONS PER MONTH",
+    "label_unlimited": "UNLIMITED",
+    "label_memes": "MEMES",
+
+    "label_even": "EVEN ELON LOVES OUR MEMES!",
+    "description_even": "Wall Street Memes brings you the long-awaited token for a vibrant community followed and engaged with by even Elon Musk."
+  },
+  "wsm_token": {
+    "title": "$WSM TOKEN",
+    "content_1": "The little guy challenged Wall Street in the infamous GameStop fiasco of 2021, and the legacy of those brave Wall Street Bets heroes endures until today.",
+    "content_2": "Born out of that movement is Wall Street Memes - the ultimate expression of the internet’s triumph over rampant capitalism. “Greed is good,” said Gordon Gekko in the ‘80s as he got rich off useless stocks. Around 30 years later, hundreds of arguably even more useless meme coins allow ordinary people to do the same.",
+    "content_3": "Wall Street Memes is tokenising the movement. Join the $WSM army today and prove that greed is, indeed, very good."
+  },
+  "wall_meme": {
+    "title": "HOW TO BUY WALL STREET MEMES TOKEN",
+    "subtitle": "Take charge and buy $WSM tokens in presale using ETH, BNB, USDT, or bank card before it lists on DEX.",
+    "speech_1": "Send ETH or BNB to your wallet and ape in using your preferred chain. Use the presale widget above to swap for $WSM.",
+    "speech_2": "You can also buy $WSM tokens with USDT (ERC-20 or BEP-20). Use the USDT option and swap your desired amount.",
+    "speech_3": "Prefer plastic? No problem. Have your own crypto wallet address on hand and order $WSM tokens using your bank card.",
+    "button_helper": "More Helper"
+  },
+  "roadmap": {
+    "title": "ROADMAP",
+    "subtitle": "We're laying the foundation and empowering our community every step of the way. Together, we'll show the world that Wall Street Memes is here to stay.",
+    "phase": "PHASE",
+    "foundation": "FOUNDATION",
+    "launch": "LAUNCH",
+    "community": "COMMUNITY EMPOWERMENT",
+    "smart_contract": "🚀 Smart Contract Development:",
+    "smart_contract_content": "Secure and audited smart contract for WSM token to ensure transparency and trust."
+  },
+  "tokenomics": {
+    "title": "TOKENOMICS",
+    "subtitle": "The launch of the $WSM token will help sustain the growth of the Wall Street Memes community and reward loyal members.",
+    "marketing": "Marketing",
+    "community_rewards": "Community Rewards",
+    "cex": "CEX Liquidity",
+    "dex": "DEX Liquidity"
+  },
+  "wsm_media": {
+    "title": "WSM IN THE MEDIA",
+    "content": "The ONLY Meme Coin Worth Buying - The PEPE Coin Killer! (Huge Potential!)"
+  },
+  "wsm_airdrop": {
+    "title": "$50K $WSM AIRDROP",
+    "subtitle": "We’re giving away $50,000 worth of $WSM tokens split between 5 lucky degens in a very generous Wall Street Memes airdrop. Enter below and make sure you’re in it to win it!",
+    "common_ans": "Common answers to questions about Wall Street Memes ($WSM) can be found below.",
+    "ques": "What are the $WSM token details?",
+    "ans": "$WSM is an ERC-20 token on the Ethereum blockchain with a maximum supply of 2,000,000,000 (2 billion). The token contract address is 0xB62E45c3Df611dcE236A6Ddc7A493d79F9DFadEf Please do not send any funds to this token contract address, as they cannot be recovered. $WSM can currently only be purchased through the official presale."
+  },
+  "footer": {
+    "content_1": "Tower Financial Centre, 10th Floor, 50th Street & Corner of Elvira, Panama City, Panama. Registration No. 182731846. WallStMemes LTD",
+    "content_2": "Wall Street Memes. All Rights Reserved.",
+    "link_1": "Terms and Conditions",
+    "link_2": "Privacy",
+    "link_3": "Cookies",
+    "content_3": "Cryptocurrency may be unregulated in your jurisdiction. The value of cryptocurrencies may go down as well as up. Profits may be subject to capital gains or other taxes applicable in your jurisdiction"
+  }
+}
