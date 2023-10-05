@@ -4,12 +4,13 @@ import { Component, ReactNode } from 'react';
 import ImageFluid from '../../../../components/atom/Image/ImageFluid';
 import { COLOR_PRIMARY } from '../../../../assets/color';
 
-import {Input} from '@mui/material';
+import {Input, Theme} from '@mui/material';
 
 import WalletBox from './WalletBox';
 import ButtonSecondary from '../../../../components/atom/Button/ButtonSecondary';
 import { I18n } from '../../../../i18';
 import { withTranslation } from 'react-i18next';
+import { theme } from '../../../../HOCs/useDetachScreen';
 
 
 type Props = I18n & {
@@ -49,7 +50,7 @@ class Banner extends Component<Props, State> {
     const {t} = this.props;
 
     return (
-      <BannerStyled>
+      <BannerStyled theme={theme}>
         <Box className='content'>
           <ImageFluid src='https://wallstmemes.com/assets/images/center-title.svg'/>
           <Box display={'flex'} gap={3} my={3}>
@@ -59,7 +60,7 @@ class Banner extends Component<Props, State> {
           </Box>
           <WalletBox/>
         </Box>
-        <ButtonSecondary sx={{
+        <ButtonSecondary className='button' sx={{
           bottom: '9%',
           left: 0,
           right: 0,
@@ -67,6 +68,7 @@ class Banner extends Component<Props, State> {
           maxWidth: '185px',
           position: 'absolute'
         }}>{t?.('banner.button_whitepaper')}</ButtonSecondary>
+        <img className='img-mobile' src='https://wallstmemes.com/assets/images/banner-mobile.svg'/>
       </BannerStyled>
     );
   }
@@ -99,12 +101,31 @@ export const InputOutlinedStyled = styled(Input)`
   }
 `;
 
-const BannerStyled = styled(Box)`
+const BannerStyled = styled(Box)<{theme: Theme}>`
     padding: 110px 14px 0px 8px;
     background: #ffffff url('https://wallstmemes.com/assets/images/banner-desktop.svg') no-repeat 50% 0;
     background-size: cover;
     height: 150vh;
     position: relative;
+
+    .img-mobile {
+        display: none;
+        width: 100%;
+      }
+
+    ${props => props.theme.breakpoints.down('sm')} {
+      height: auto;
+      .img-mobile {
+        display: block;
+        object-fit: cover;
+      }
+
+      .button {
+        bottom: 3%;
+      }
+
+      background: none
+    }
 
     .content {
       max-width: 450px;

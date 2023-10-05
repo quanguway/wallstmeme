@@ -6,6 +6,8 @@ import Header from '../components/template/Header';
 import Countdown from 'react-countdown';
 import moment from 'moment';
 import Footer from '../components/template/Footer';
+import FooterBanner from '../pages/HomePage/widgets/Footer';
+import storage from '../utils/storage';
 
 
 type Props = { };
@@ -27,7 +29,6 @@ class AppLayout extends Component<Props, State> {
       },
       typography: {
         fontFamily: 'Work Sans,sans-serif',
-        fontWeightBold: 'bolder',
         h1: {
           fontWeight: 700
         },
@@ -44,9 +45,12 @@ class AppLayout extends Component<Props, State> {
         }
       }
     });
+
   }
 
   render() {
+    storage.lang.set('en');
+
     return(
       <ThemeProvider theme={this.theme}>
         <Header/>
@@ -58,8 +62,8 @@ class AppLayout extends Component<Props, State> {
             } else {
               return (
                 <Box 
-                  // width={'100%'}
                   position={'sticky'} 
+                  top={'80px'}
                   zIndex={1000} 
                   color={'white'} 
                   fontWeight={600} 
@@ -75,6 +79,9 @@ class AppLayout extends Component<Props, State> {
           }}
         />
         <Outlet/>
+        <Box mt={14}>
+          <FooterBanner />
+        </Box>
         <Footer/>
       </ThemeProvider>
     );

@@ -106,7 +106,7 @@ class RoadMapPhase extends Component<I18n> {
 const  RoadMapPhaseStyled = styled(Grid)<{theme: Theme}>`
   ${props => props.theme.breakpoints.down('lg')} {
     flex-direction: column;
-    width: 100%;
+    width: 103%;
     .phase-item {
       max-width: 100%;
     }

@@ -1,5 +1,4 @@
-import { createTheme, useMediaQuery } from '@mui/material';
-import { FC } from 'react';
+import { createTheme } from '@mui/material';
 
 export const theme = createTheme({
   breakpoints: {
@@ -13,20 +12,6 @@ export const theme = createTheme({
   },
 });
 
-// const useDetachScreen = (screen: 'desktop' | 'tablet' | 'mobile') => {
-//   switch(screen) {
-//     case 'desktop':
-//       return useMediaQuery(theme.breakpoints.up('xl'));
-//     case 'tablet':
-//       return useMediaQuery(theme.breakpoints.down('lg'));
-//     case 'mobile':
-//       return useMediaQuery(theme.breakpoints.down('sm'));
-//     default:
-//       return useMediaQuery(theme.breakpoints.up('xl'));
-
-//   } 
-// };
-
 enum EScreen {
   DESKTOP = 'desktop',
   TABLET = 'tablet',
@@ -37,37 +22,3 @@ export type TScreen = {
   screen?: EScreen
 }
 
-// const detachScreen = () => {
-//   switch(true) {
-//     case useMediaQuery(theme.breakpoints.up('lg')):
-//       return EScreen.DESKTOP;
-//     case useMediaQuery(theme.breakpoints.down('lg')):
-//       return EScreen.TABLET;
-//     case useMediaQuery(theme.breakpoints.up('sm')) && useMediaQuery(theme.breakpoints.down('sm')):
-//       return EScreen.MOBILE;
-//     default:
-//       return EScreen.DESKTOP;
-//   }
-// };
-
-// eslint-disable-next-line react/display-name
-const withDetachScreen = (Component: FC<any> ) => (props: any) => {
-
-  const screen = () => {
-    switch(true) {
-      // case useMediaQuery(theme.breakpoints.up('lg')):
-      //   return EScreen.DESKTOP;
-      case useMediaQuery(theme.breakpoints.down('lg')):
-        return EScreen.TABLET;
-      case useMediaQuery(theme.breakpoints.down('sm')):
-        return EScreen.MOBILE;
-      default:
-        return EScreen.DESKTOP;
-    }
-  };
-
-  return <Component screen={screen()} {...props} />;
-  
-};
-
-export default withDetachScreen;

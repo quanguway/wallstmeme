@@ -16,7 +16,6 @@ class Tokenomics extends Component<I18n> {
   render(): ReactNode {
 
     const {t} = this.props;
-
     const items = [
       {
         color: '#1C5AF9',
@@ -44,7 +43,8 @@ class Tokenomics extends Component<I18n> {
         <Text variant='h2' textAlign={'center'}>{t?.('tokenomics.title')}</Text>
         <Grid className='token-content' container spacing={2}>
             <Grid item xs={8}>
-              <ImageFluid src={TokenomicsImage}/>
+              <ImageFluid className='teko-image-sm' style={{display: 'none'}} src='https://wallstmemes.com/assets/images/svg-icons/tekenomics-sm.svg' />
+              <ImageFluid className='teko-image-lg' src={TokenomicsImage}/>
             </Grid>
             <Grid className='token-content-description' sx={{
               display: 'flex',
@@ -76,13 +76,29 @@ export default withTranslation('homepage')(Tokenomics);
 
 const TokenomicsStyled = styled(Box)<{theme: Theme}>`
 
+  ${props => props.theme.breakpoints.down('sm')} {
+      .teko-image-sm {
+        margin-left: 18px;
+        display: block !important;
+        max-width: 130%;
+      }
+
+      .teko-image-lg {
+        display: none;
+      }
+  }
+
+
   ${props => props.theme.breakpoints.down('md')} {
+
+ 
+
     .token-content {
       flex-direction: column-reverse;
       text-align: center;
     }
     .token-content-description {
-      padding: 16px 16px 16px 52px;
+      padding: 16px 16px 16px 60px;
       flex-direction: column-reverse;
       text-align: center;
       max-width: 100%;

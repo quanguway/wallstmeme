@@ -53,13 +53,16 @@ class MemeSwiper extends Component<I18n> {
           slidesPerView={1.5}
           spaceBetween={10}
           centeredSlides={true}
-
-          // breakpoints= {{
-          //   1000: {
-          //     slidesPerView: 1.5,
-          //     spaceBetween: 20,
-          //   },
-          // }}
+          breakpoints= {{
+            1500: {
+              slidesPerView: 2.5,
+              spaceBetween: 20,
+            },
+            1900: {
+              slidesPerView: 3.5,
+              spaceBetween: 20,
+            },
+          }}
           >
         
           {this.imageData.map((s, index) => {

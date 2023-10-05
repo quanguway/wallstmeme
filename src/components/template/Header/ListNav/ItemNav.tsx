@@ -36,10 +36,8 @@ class ItemNav extends Component<Props, State> {
   
 
   render(): ReactNode {
-    console.log(this.props.icon);
-    
     return (
-      <ItemNavStyled>
+      <ItemNavStyled onClick={this.props.onclick}>
         {! this.props.icon ? <Text>{this.props.label}</Text> : this.props.icon}
 
         {(this.props.children ?? [])?.length > 0 && 

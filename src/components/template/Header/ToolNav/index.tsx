@@ -8,44 +8,60 @@ import { TNavItem } from '../ListNav';
 import { withTranslation } from 'react-i18next';
 import { I18n } from '../../../../i18';
 import { theme } from '../../../../HOCs/useDetachScreen';
+import storage from '../../../../utils/storage';
 
 class ToolNav extends Component<I18n> {
+
 
   
   render(): ReactNode {
 
     const {t, i18n} = this.props;
 
+
+    const handleChangeLang = (lang: string) => {
+      i18n?.changeLanguage(lang);
+      storage.lang.set(lang);
+    };
     
     const data: TNavItem = {
       label: '' ,
-      link: '/',
       children: [
         {
-          label: <RenderChildItem onClick={() => i18n?.changeLanguage('en')} label='English' icon={<img className='icon-flag' src={AmericaFlagIcon} />}/>,
-          link: '/'
+          label: <RenderChildItem onClick={() => handleChangeLang('en')} label='English' icon={<img className='icon-flag' src={AmericaFlagIcon} />}/>,
         },
         {
-          label: <RenderChildItem onClick={() => i18n?.changeLanguage('fr')} label='France' icon={<img className='icon-flag' src={'https://wallstmemes.com/assets/images/flags/fr.svg'} />}/>,
-          link: '/'
+          label: <RenderChildItem onClick={() => handleChangeLang('fr')} label='France' icon={<img className='icon-flag' src={'https://wallstmemes.com/assets/images/flags/fr.svg'} />}/>,
         },
         {
-          label: <RenderChildItem onClick={() => i18n?.changeLanguage('id')} label='Indonesian' icon={<img className='icon-flag' src={'https://wallstmemes.com/assets/images/flags/id.svg'} />}/>,
-          link: '/'
+          label: <RenderChildItem onClick={() => handleChangeLang('id')} label='Indonesian' icon={<img className='icon-flag' src={'https://wallstmemes.com/assets/images/flags/id.svg'} />}/>,
         },
       ]
+    };
+
+    const urlIcon = () => {
+      switch(i18n?.language) {
+        case 'en': 
+          return AmericaFlagIcon;
+        case 'fr':
+          return 'https://wallstmemes.com/assets/images/flags/fr.svg';
+        case 'id':
+          return 'https://wallstmemes.com/assets/images/flags/id.svg';
+        default:
+          return AmericaFlagIcon;
+      }
     };
 
     return (
       <ToolNavStyled theme={theme}>
         <Box className={'flag'}>
           <ItemNav 
-            icon={<img className='icon-flag' src={AmericaFlagIcon} />} 
+            icon={<img className='icon-flag' src={urlIcon()} />} 
             {...data}
             />
         </Box>
 
-        <ButtonPrimary isBold> {t?.('header.stalking')}</ButtonPrimary>
+        <ButtonPrimary onClick={() => window.location.href =`/${storage.lang.get()}/dashboard`} isBold> {t?.('header.stalking')}</ButtonPrimary>
 
       </ToolNavStyled>
     );
@@ -78,7 +94,7 @@ const ToolNavStyled = styled(Box)<{theme: Theme}>`
   
 `;
 
-class RenderChildItem extends Component<{label: string, icon: React.ReactNode} & BoxProps> {
+export class RenderChildItem extends Component<{label: string, icon: React.ReactNode} & BoxProps> {
   render(): React.ReactNode {
     return (
       <RenderChildItemStyled {...this.props}>

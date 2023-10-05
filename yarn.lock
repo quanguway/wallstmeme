@@ -2356,6 +2356,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-navigation@^3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@types/react-navigation/-/react-navigation-3.4.0.tgz#d610d13c9162312079a8ca102660143f07432cbf"
+  integrity sha512-Y7F5zU8BTBK8tEOvUqgvwvPZ7+9vnc2UI1vHwJ/9ZJG98TntNv04GWa6lrn4MA4149pqw6cyNw/V49Yd2osAFQ==
+  dependencies:
+    react-navigation "*"
+
 "@types/react-transition-group@^4.4.6":
   version "4.4.7"
   resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-4.4.7.tgz#bf69f269d74aa78b99097673ca6dd6824a68ef1c"
@@ -8175,6 +8182,11 @@ react-lifecycles-compat@^3.0.2:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-navigation@*, react-navigation@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-5.0.0.tgz#a7dd98a6148ba997834ebcf5a5073bdb3d4f4eb3"
+  integrity sha512-ACTzjc4L1ik7rJ092ZhIELBJ/pnoLgRIqWHSKcYcaBASxyjJCgBEDIV5s585HBj55tw25YwNdlj3+d4B4MYWDg==
 
 react-refresh@^0.11.0:
   version "0.11.0"

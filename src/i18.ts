@@ -4,6 +4,10 @@ import { initReactI18next } from 'react-i18next';
 import homepage_en from './assets/lang/en/homepage.json';
 import homepage_fr from './assets/lang/fr/homepage.json';
 import homepage_id from './assets/lang/id/homepage.json';
+
+import dashboard_page_en from './assets/lang/en/dashboardpage.json';
+import dashboard_page_fr from './assets/lang/fr/dashboardpage.json';
+import dashboard_page_id from './assets/lang/id/dashboardpage.json';
 // import common_en from './assets/lang/en/common.json';
 // import common_ce from './assets/lang/ce/common.json';
 
@@ -20,15 +24,18 @@ i18n
       en: {
         // common: common_en,
         homepage: homepage_en,
+        dashboard_page: dashboard_page_en,
 
       },
       fr: {
         // common: common_ce,
-        homepage: homepage_fr
+        homepage: homepage_fr,
+        dashboard_page: dashboard_page_fr
       },
       id: {
         // common: common_ce,
-        homepage: homepage_id
+        homepage: homepage_id,
+        dashboard_page: dashboard_page_id
       },
   },
     fallbackLng: 'en',

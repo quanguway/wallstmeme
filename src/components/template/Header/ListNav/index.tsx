@@ -5,6 +5,7 @@ import { Box, Theme } from '@mui/material';
 import { withTranslation } from 'react-i18next';
 import { I18n } from '../../../../i18';
 import { theme } from '../../../../HOCs/useDetachScreen';
+import storage from '../../../../utils/storage';
 
 type Props = {
 
@@ -16,7 +17,7 @@ type State = {
 
 export type TNavItem = {
   label: React.ReactNode;
-  link: string;
+  onclick?: () => void;
   children?: TNavItem[];
 }
 
@@ -34,30 +35,27 @@ class ListNav extends Component<I18n, State> {
     const items: TNavItem[] = [
       {
         label: t?.('header.stalking'),
-        link: '/',
-  
+        onclick: () => window.location.href =`/${storage.lang.get()}/dashboard`
+        
       },
       {
         label: t?.('header.community'),
-        link: '/'
       },
       {
         label: t?.('header.about'),
-        link: '/',
+        
         children: [
           {
             label: t?.('header.about'),
-            link: '/',
+            
           },
           {
             label: t?.('header.about'),
-            link: '/'
           }
         ]
       },
       {
         label: t?.('header.media'),
-        link: '/'
       }
     ];
     return (

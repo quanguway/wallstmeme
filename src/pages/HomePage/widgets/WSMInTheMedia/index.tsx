@@ -29,6 +29,7 @@ class WSMInTheMedia extends Component<I18n> {
         title: t?.('wsm_media.content')
       },
     ];
+
     return (
       <WSMInTheMediaStyled theme={theme} px={4}>
         <Text mt={20} mb={8} textAlign={'center'} variant='h2'>{t?.('wsm_media.title')}</Text>
@@ -52,14 +53,13 @@ export default withTranslation('homepage')(WSMInTheMedia);
 const WSMInTheMediaStyled = styled(Box)<{theme: Theme}>`
   ${props => props.theme.breakpoints.down('lg')} {
     .wsm_media-content {
-      max-width: 100%;
+      max-width: 120%;
       flex-direction: column;
 
       &-item {
         max-width: 100%;
         &-img {
           width: 100%;
-          margin-bottom: 8px;
 
         }
       }

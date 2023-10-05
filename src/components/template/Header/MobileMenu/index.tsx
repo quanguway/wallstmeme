@@ -1,11 +1,15 @@
 import styled from '@emotion/styled';
-import { Box, Divider, Drawer, IconButton, List, ListItem, Theme } from '@mui/material';
+import { Box, Divider, Drawer, IconButton, List, ListItem, Popover, Theme } from '@mui/material';
 import { Component, ReactNode } from 'react';
 import { theme } from '../../../../HOCs/useDetachScreen';
 import { withTranslation } from 'react-i18next';
 import { I18n } from '../../../../i18';
 import Text from '../../../atom/Text';
 import ListSocial from '../../../molecules/ListSocial';
+import { RenderChildItem } from '../ToolNav';
+import { COLOR_BLUE } from '../../../../assets/color';
+import AmericaFlagIcon from '../../../../assets/icon/Flags/AmericaFlagIcon.svg';
+import storage from '../../../../utils/storage';
 
 type Props = I18n & {
 
@@ -13,23 +17,37 @@ type Props = I18n & {
 
 type State = {
   isOpenMenu: boolean;
+  anchorEl: HTMLButtonElement | null
+  open: boolean
 }
-
 class MobileMenu extends Component<Props, State> {
 
   constructor(props: Props) {
     super(props);
 
-    this.state = {isOpenMenu: false};
+    this.state = {
+      isOpenMenu: false,
+      anchorEl: null,
+      open: false
+    };
   }
+
+  handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    this.setState({anchorEl: event.currentTarget});
+  };
+
+  handleClose = () => {
+    this.setState({anchorEl: null});
+  };
 
   render(): ReactNode {
 
-    const {t} = this.props;
+    const {t, i18n} = this.props;
 
     const navMenuMobile = [
       {
-        'title': t?.('header.stalking')
+        'title': t?.('header.stalking'),
+        onclick: () => window.location.href =`/${storage.lang.get()}/dashboard`
       }, 
       {
         'title': t?.('header.community')
@@ -48,6 +66,41 @@ class MobileMenu extends Component<Props, State> {
       }, 
     ];
 
+    const handleChangeLang = (lang: string) => {
+      i18n?.changeLanguage(lang);
+      storage.lang.set(lang);
+      
+      this.handleClose();
+    };
+
+    const langOptions = [
+      {
+        label: <RenderChildItem onClick={() => handleChangeLang('en')} label='English' icon={<img className='icon-flag' src={AmericaFlagIcon} />}/>,
+        link: '/'
+      },
+      {
+        label: <RenderChildItem onClick={() => handleChangeLang('fr')} label='France' icon={<img className='icon-flag' src={'https://wallstmemes.com/assets/images/flags/fr.svg'} />}/>,
+        link: '/'
+      },
+      {
+        label: <RenderChildItem onClick={() => handleChangeLang('id')} label='Indonesian' icon={<img className='icon-flag' src={'https://wallstmemes.com/assets/images/flags/id.svg'} />}/>,
+        link: '/'
+      },
+    ];
+
+    const getLang = () => {
+      switch(i18n?.language) {
+        case 'en': 
+          return 'English';
+        case 'fr':
+          return 'France';
+        case 'id':
+          return 'Indonesia';
+        default:
+          return 'English';
+      }
+    };
+
     return (
       <MobileMenuStyled theme={theme}>
         <IconButton onClick={() => this.setState({isOpenMenu: !this.state.isOpenMenu})}>
@@ -60,7 +113,7 @@ class MobileMenu extends Component<Props, State> {
         >
           <List>
             {navMenuMobile.map((o, index) => (
-              <ListItem key={index}>
+              <ListItem onClick={o.onclick} key={index}>
                 <Box className='nav-item' color={'white'} width={'100%'}>
                   <Text p={1} fontWeight={700}>{o.title}</Text> 
                   <Divider sx={{
@@ -71,19 +124,50 @@ class MobileMenu extends Component<Props, State> {
               </ListItem>
             ))}
           </List>
-          <Box className='nav-button'>
-            <WalletIcon/>
-            {t?.('header.connect_wallet')}
-          </Box>
-          <Box className='nav-lang'>
-            <Text color={'white'} fontWeight={700}>English</Text>
-          </Box>
+            <Box className='nav-button' >
+              <WalletIcon/>
+              {t?.('header.connect_wallet')}
+            </Box>
+          <IconButton className='nav-lang' onClick={this.handleClick}>
+            <Text color={'white'} fontWeight={700}>{getLang()}</Text>
+          </IconButton>
           <ListSocial/>
         </DrawerStyled>
+
+        <PopoverStyled
+          id={this.state.anchorEl ? 'item-nav' : ''}
+          open={Boolean(this.state.anchorEl)}
+          anchorEl={this.state.anchorEl}
+          onClose={this.handleClose}
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'center',
+          }}
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+        >
+          <Box className='popover-card' display={'flex'} gap={'12px'} padding={2} width={'250px'} flexDirection={'column'}>
+            {langOptions?.map((o, index) => (
+              <Text fontSize={'16px'} fontWeight={'600'} key={index}>{o.label}</Text>
+            ))}
+          </Box>
+        </PopoverStyled>
       </MobileMenuStyled>
     );
   }
 }
+
+const PopoverStyled = styled(Popover)`
+  .popover-card {
+    & > p:hover {
+      cursor: pointer;
+      color: ${COLOR_BLUE};
+    }
+  }
+
+`;
 
 export default withTranslation('homepage')(MobileMenu);
 
@@ -106,6 +190,7 @@ const DrawerStyled = styled(Drawer)`
   }
 
   .nav-button {
+    border-radius: 0px;
     padding: 8px;
     margin-left: 17px;
     width: 84%;
@@ -118,7 +203,8 @@ const DrawerStyled = styled(Drawer)`
   }
 
   .nav-lang {
-    width: 80%;
+    display: block;
+    width: 90%;
     padding: 12px 15px;
     margin-left: 17px;
     margin-top: 12px;
@@ -128,7 +214,7 @@ const DrawerStyled = styled(Drawer)`
     letter-spacing: .02em;
     text-transform: capitalize;
     font-weight: 500;
-
+    text-align: left;
   }
 
 `;

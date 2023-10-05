@@ -36,5 +36,9 @@ const WSMTokenStyled = styled(Box)<{theme: Theme}>`
   ${props => props.theme.breakpoints.down('lg')} {
     flex-direction: column;
     text-align: center;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 `;

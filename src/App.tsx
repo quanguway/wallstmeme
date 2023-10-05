@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AppLayout from './layouts/AppLayout';
 import HomePage from './pages/HomePage';
+import DashboardPage from './pages/DashboardPage';
 
 function AppUI() {
 
@@ -12,7 +13,7 @@ function AppUI() {
       <Routes>
         <Route path='/' element={<AppLayout/>}>
           <Route index path='/' element={<HomePage />} />
-          {/* <Route path='customers' element={<CustomerPage />} /> */}
+          <Route index path='/dashboard' element={<DashboardPage />} />
         </Route>
         <Route
             path="*"
@@ -29,6 +30,7 @@ function AppUI() {
 
 
 function App() {
+
   return (
     <AppUI />
 

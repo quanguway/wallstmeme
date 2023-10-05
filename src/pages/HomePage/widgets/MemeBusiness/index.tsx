@@ -11,6 +11,7 @@ import WowIcon from '../../../../assets/icon/meme/wow.svg';
 import { I18n } from '../../../../i18';
 import { withTranslation } from 'react-i18next';
 import { theme } from '../../../../HOCs/useDetachScreen';
+import BoxSection from '../../../../components/atom/Box/BoxSection';
 
 type TMemeFollower = {
   title: string,
@@ -40,32 +41,34 @@ class MemeBusiness extends Component<I18n> {
     ];
     return (
       <MemeBusinessStyled theme={theme} mt={12}>
-        <Grid container spacing={2}>
-          <Grid className='meme-image' item xs={2}>
-            <ImageFluid  src={MemeTrollIcon}/>
+        <BoxSection>
+          <Grid container spacing={2}>
+            <Grid className='meme-image' item xs={2}>
+              <ImageFluid  src={MemeTrollIcon}/>
+            </Grid>
+            <Grid item xs={12} md={8}>
+              <Box className='meme-container' px={9} justifyContent={'center'} alignItems={'center'} flexWrap={'nowrap'} display={'flex'} flexDirection={'column'}>
+                <Text textAlign={'center'} fontSize={'35px'} fontWeight={700}>{t?.('meme_buss.title')}</Text>
+                <Grid className='meme-content' sx={{
+                  maxWidth: '75%',
+                }} container spacing={2} mt={3}>
+                  {follower.map((o, index) => (
+                    <Grid key={index} item xs={5} sm={4} md={4}>
+                      <MemeFollowerItem {...o}/>
+                    </Grid>
+                  ))}
+                </Grid>
+              </Box>
+            </Grid>
+            <Grid className='meme-image' item xs={2}>
+              <ImageFluid  src={MemeManIcon}/>
+            </Grid>
           </Grid>
-          <Grid item xs={12} md={8}>
-            <Box px={9} justifyContent={'center'} alignItems={'center'} flexWrap={'nowrap'} display={'flex'} flexDirection={'column'}>
-              <Text textAlign={'center'} fontSize={'35px'} fontWeight={700}>{t?.('meme_buss.title')}</Text>
-              <Grid className='meme-content' sx={{
-                maxWidth: '75%',
-              }} container spacing={2} mt={3}>
-                {follower.map((o, index) => (
-                  <Grid key={index} item xs={5} sm={4} md={4}>
-                    <MemeFollowerItem {...o}/>
-                  </Grid>
-                ))}
-              </Grid>
-            </Box>
-          </Grid>
-          <Grid className='meme-image' item xs={2}>
-            <ImageFluid  src={MemeManIcon}/>
-          </Grid>
-        </Grid>
+          <Box display={'flex'} justifyContent={'center'} my={4}>
+            <ImageFluid src={WowIcon}/>
+          </Box>
+        </BoxSection>
 
-        <Box display={'flex'} justifyContent={'center'} my={4}>
-          <ImageFluid src={WowIcon}/>
-        </Box>
 
         <MemeSwiper />
       </MemeBusinessStyled>
@@ -77,13 +80,21 @@ export default withTranslation('homepage')(MemeBusiness);
 
 const MemeBusinessStyled = styled(Box)<{theme: Theme}>`
   ${props => props.theme.breakpoints.down('lg')} {
+    /* margin-top: 500px; */
     .meme-content {
       justify-content: center;
       flex-wrap: wrap;
       max-width: 100% !important;
+      /* padding: 0; */
+
+
     }
     .meme-image {
       display: none;
+    }
+
+    .meme-container {
+      padding: 6px;
     }
   }
 `;
