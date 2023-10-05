@@ -8,6 +8,7 @@ import moment from 'moment';
 import Footer from '../components/template/Footer';
 import FooterBanner from '../pages/HomePage/widgets/Footer';
 import storage from '../utils/storage';
+import { I18n } from '../i18';
 
 
 type Props = { };
@@ -50,6 +51,8 @@ class AppLayout extends Component<Props, State> {
 
   render() {
     !storage.lang.get() && storage.lang.set('en');
+      // const lang = window.location.href.split('/')[3];
+      
 
     return(
       <ThemeProvider theme={this.theme}>

@@ -7,9 +7,12 @@ import ToolNav from './ToolNav';
 import { TScreen } from '../../../HOCs/useDetachScreen';
 
 import MobileMenu from './MobileMenu';
+import storage from '../../../utils/storage';
+import { I18n } from '../../../i18';
+import { withTranslation } from 'react-i18next';
 
 
-type Props = TScreen & {
+type Props = I18n & TScreen & {
 
 }
 
@@ -21,6 +24,14 @@ class Header extends Component<Props, State> {
 
   constructor(props: Props) {
     super(props);
+    console.log('????');
+
+    const {i18n} = this.props;
+
+    console.log(storage.lang.get());
+    
+
+    i18n?.changeLanguage(storage.lang.get() ?? 'en');
   }
 
   render(): ReactNode {    
@@ -35,7 +46,7 @@ class Header extends Component<Props, State> {
   }
 }
 
-export default Header;
+export default withTranslation('homepage')(Header);
 
 
 const HeaderStyled = styled(Box)`
