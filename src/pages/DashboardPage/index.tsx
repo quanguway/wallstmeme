@@ -6,6 +6,7 @@ import DashboardSummary from './widgets/DashboardSummary';
 import BoxSection from '../../components/atom/Box/BoxSection';
 import { I18n } from '../../i18';
 import { withTranslation } from 'react-i18next';
+import storage from '../../utils/storage';
 // import { withRouter } from 'react-router';
 
 class DashboardPage extends Component<I18n> {
@@ -16,9 +17,9 @@ class DashboardPage extends Component<I18n> {
     const {i18n} = props;
 
 
-    const lang = window.location.href.split('/')[3];
+    // const lang = window.location.href.split('/')[3];
     
-    i18n?.changeLanguage(lang);
+    i18n?.changeLanguage(storage.lang.get());
   }
 
   render(): ReactNode {

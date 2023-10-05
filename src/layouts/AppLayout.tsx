@@ -49,7 +49,7 @@ class AppLayout extends Component<Props, State> {
   }
 
   render() {
-    storage.lang.set('en');
+    !storage.lang.get() && storage.lang.set('en');
 
     return(
       <ThemeProvider theme={this.theme}>

@@ -47,7 +47,7 @@ class MobileMenu extends Component<Props, State> {
     const navMenuMobile = [
       {
         'title': t?.('header.stalking'),
-        onclick: () => window.location.href =`/${storage.lang.get()}/dashboard`
+        onclick: () => window.location.href ='/dashboard'
       }, 
       {
         'title': t?.('header.community')

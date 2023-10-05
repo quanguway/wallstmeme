@@ -61,7 +61,7 @@ class ToolNav extends Component<I18n> {
             />
         </Box>
 
-        <ButtonPrimary onClick={() => window.location.href =`/${storage.lang.get()}/dashboard`} isBold> {t?.('header.stalking')}</ButtonPrimary>
+        <ButtonPrimary onClick={() => window.location.href ='/dashboard'} isBold> {t?.('header.stalking')}</ButtonPrimary>
 
       </ToolNavStyled>
     );
